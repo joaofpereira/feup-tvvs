@@ -1,6 +1,6 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
@@ -8,89 +8,86 @@ import main.Algorithm;
 
 public class AlgorithmTest {
 
+	public final float floatTolerance = 0.0001f;
+	
 	public Algorithm alg = new Algorithm();
 
 	/**
-	 * Test Min Function
+	 * Test gcd function
+	 */
+	@Test
+	public void TestGCD() {
+		assertEquals(1, alg.gcd(2, 1));
+	}
+
+	/**
+	 * Test min function
 	 *
 	 * It's expected the mutant on line 21 cannot be killed Functionally
 	 * Equivalent Mutant
 	 */
 	@Test
 	public void TestMin() {
-	
-		int minimum = alg.Min(0, 0); // doesn't kill anyone of the mutants
-		int minimum2 = alg.Min(0, 1); // only kill the negated conditional
+
+		int minimum = alg.min(0, 0); // doesn't kill anyone of the mutants
+		int minimum2 = alg.min(0, 1); // only kill the negated conditional
 										// mutant
-		int minimum3 = alg.Min(1, 0); // only kill the negated conditional
+		int minimum3 = alg.min(1, 0); // only kill the negated conditional
 										// mutant
-	
+
 		assertEquals(0, minimum);
 		assertEquals(0, minimum2);
 		assertEquals(0, minimum3);
-	
+
 	}
 
 	/**
-	 * Test SumArray Exception
-	 */
-	@Test(expected = IllegalArgumentException.class)
-	
-	public void TestSumArrayException() {
-	
-		int a[] = null, b[] = { 1, 2, 3, 4 }, c[];
-	
-		c = alg.SumArray(a, b);
-	
-	}
-
-	/**
-	 * Test SumArray Function
+	 * Test numZero function
 	 */
 	@Test
-	public void TestSumArray() {
+	public void TestNumZero() {
+		int a[] = {0};
+
+		assertEquals(1, alg.numZero(a));
+	}
 	
-		int a[] = { 1, 2, 3, 4 };
-		int b[] = { 1, 2, 3, 4 };
+	/**
+	 * Test negateArray function
+	 */
+	@Test
+	public void TestNegateArray() {
+		float[] a = {1, 2, 4};
+		float b[] = new float[a.length];
+		
+		System.arraycopy(a, 0, b, 0, a.length);
+		
+		alg.negateArray(2, a);
+		
+		for(int i = 0; i < a.length; i++)
+			assertEquals(b[i] * (-2), a[i], floatTolerance);
+	}
 	
-		int c[] = alg.SumArray(a, b);
-	
-		for (int i = 0; i < a.length; i++) {
-			assertEquals(a[i] + b[i], c[i]);
+	/**
+	 * Test multiplyByTwoIntArray function
+	 */
+	@Test
+	public void MultiplyByTwoIntArrayTest() {
+		int[] array = { 1, 2, 3, 4 };
+		
+		int[] result = alg.multiplyByTwoIntArray(array);
+		
+		for(int i = 0; i < result.length; ++i) {
+			assertTrue(result[i] == array[i] * 2);
 		}
-	
-	}
-
-	/**
-	 * Test IndexOf Function
-	 */
-	
-	@Test(expected = NullPointerException.class)
-	public void TestIndexOf1() {
-		int a[] = null;
-
-		assertEquals(0, alg.IndexOf(a, 0));
-	}
-
-	@Test
-	public void TestIndexOf2() {
-		int b[] = {};
-
-		assertEquals(-1, alg.IndexOf(b, 0));
 	}
 	
 	@Test
-	public void TestIndexOf3() {
-		int c[] = {1};
-
-		assertEquals(-1, alg.IndexOf(c, 0));
+	public void testLessThanThree() {
+		assertTrue(alg.isLessThanThree(2));
 	}
 	
 	@Test
-	public void TestIndexOf4() {
-		int d[] = {0};
-
-		assertEquals(0, alg.IndexOf(d, 0));
+	public void testLessThanThree2() {
+		assertFalse(alg.isLessThanThree(3));
 	}
-
 }

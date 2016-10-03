@@ -1,21 +1,17 @@
 package main;
 
 public class Algorithm {
-
-	public int[] SumArray(int[] a, int[] b) {
-		if (a == null || b == null || a.length != b.length) {
-			throw new IllegalArgumentException();
+	public int gcd(int x, int y) {
+		int tmp;
+		while (y != 0) {
+			tmp = x % y;
+			x = y;
+			y = tmp;
 		}
-
-		int[] c = new int[a.length + b.length];
-		for (int i = 0; i < a.length; i++) {
-			c[i] = a[i] + b[i];
-		}
-
-		return c;
+		return x;
 	}
 
-	public int Min(int x, int y) {
+	public int min(int x, int y) {
 		int v;
 
 		if (x < y)
@@ -25,19 +21,31 @@ public class Algorithm {
 
 		return v;
 	}
-	
-	/**
-	 * Mutations are: (m1) i < array.length ---> i >= array.length
-	 * (m2) array[i] == v ---> array[i] != v
-	 * (m3) i++ ---> i--
-	 */
-	public int IndexOf(int[] array, int v) {
-		for (int i = 0; i < array.length; i++) {
-			if (array[i] == v) {
-				return i;
-			}
-		}
 
-		return -1;
+	public int numZero(int[] x) {
+		int count = 0;
+
+		for (int i = 0; i < x.length; i++)
+			if (x[i] == 0)
+				count++;
+
+		return count;
+	}
+
+	public void negateArray(final float i, float a[]) {
+		for(int k = 0; k < a.length; k++)
+			a[k] = a[k] * (-i);
+	}
+	
+	public int[] multiplyByTwoIntArray(int[] a) {
+		int[] new_a = new int[a.length];
+		for (int i = 0; i < new_a.length; ++i) {
+			new_a[i] = a[i] << 1;
+		}
+		return new_a;
+	}
+	
+	public boolean isLessThanThree(int number) {
+		return (number < 3);
 	}
 }
