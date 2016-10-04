@@ -2,6 +2,7 @@ package test;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import main.Algorithm;
@@ -9,15 +10,19 @@ import main.Algorithm;
 public class AlgorithmTest {
 
 	public final float floatTolerance = 0.0001f;
+	private Algorithm alg;
 	
-	public Algorithm alg = new Algorithm();
+	@Before
+	public void SetUp() {
+		this.alg =  new Algorithm();
+	}
 
 	/**
 	 * Test gcd function
 	 */
 	@Test
 	public void TestGCD() {
-		assertEquals(1, alg.gcd(2, 1));
+		assertEquals(1, this.alg.gcd(2, 1));
 	}
 
 	/**
@@ -29,15 +34,15 @@ public class AlgorithmTest {
 	@Test
 	public void TestMin() {
 
-		int minimum = alg.min(0, 0); // doesn't kill anyone of the mutants
-		int minimum2 = alg.min(0, 1); // only kill the negated conditional
+		/*int minimum = this.alg.min(0, 0); // doesn't kill anyone of the mutants
+		int minimum2 = this.alg.min(0, 1); // only kill the negated conditional
 										// mutant
-		int minimum3 = alg.min(1, 0); // only kill the negated conditional
+		int minimum3 = this.alg.min(1, 0); // only kill the negated conditional
 										// mutant
 
 		assertEquals(0, minimum);
 		assertEquals(0, minimum2);
-		assertEquals(0, minimum3);
+		assertEquals(0, minimum3);*/
 
 	}
 
@@ -48,7 +53,7 @@ public class AlgorithmTest {
 	public void TestNumZero() {
 		int a[] = {0};
 
-		assertEquals(1, alg.numZero(a));
+		assertEquals(1, this.alg.numZero(a));
 	}
 	
 	/**
@@ -61,33 +66,19 @@ public class AlgorithmTest {
 		
 		System.arraycopy(a, 0, b, 0, a.length);
 		
-		alg.negateArray(2, a);
+		this.alg.negateArray(2, a);
 		
 		for(int i = 0; i < a.length; i++)
 			assertEquals(b[i] * (-2), a[i], floatTolerance);
 	}
 	
-	/**
-	 * Test multiplyByTwoIntArray function
-	 */
-	@Test
-	public void MultiplyByTwoIntArrayTest() {
-		int[] array = { 1, 2, 3, 4 };
-		
-		int[] result = alg.multiplyByTwoIntArray(array);
-		
-		for(int i = 0; i < result.length; ++i) {
-			assertTrue(result[i] == array[i] * 2);
-		}
-	}
-	
 	@Test
 	public void testLessThanThree() {
-		assertTrue(alg.isLessThanThree(2));
+		assertTrue(this.alg.isLessThanThree(2));
 	}
 	
 	@Test
 	public void testLessThanThree2() {
-		assertFalse(alg.isLessThanThree(3));
+		assertFalse(this.alg.isLessThanThree(3));
 	}
 }

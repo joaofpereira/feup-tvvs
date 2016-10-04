@@ -37,14 +37,6 @@ public class Algorithm {
 			a[k] = a[k] * (-i);
 	}
 	
-	public int[] multiplyByTwoIntArray(int[] a) {
-		int[] new_a = new int[a.length];
-		for (int i = 0; i < new_a.length; ++i) {
-			new_a[i] = a[i] << 1;
-		}
-		return new_a;
-	}
-	
 	public boolean isLessThanThree(int number) {
 		return (number < 3);
 	}
