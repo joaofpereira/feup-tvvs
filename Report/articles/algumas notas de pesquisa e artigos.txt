@@ -2,15 +2,21 @@
 Tópicos a abordar:
 
 O que é um SLA
-	- o que significa
-	- principios de um SLA
-	- como fazer ou o que compoe um SLA
-	- porque fazer um SLA
+	- o que significa - http://www.slatemplate.com/sladefinition.php
+	- principios de um SLA - in service level agreements in service oriente architecture.pdf
+	- tipos de SLA - http://www.slatemplate.com/typesofsla.php
+	- como fazer ou o que compoe um SLA - http://www.slatemplate.com/
+	- métricas de avaliação - service level agreements in service oriente architecture.pdf
+	- porque/razões(vantagens) para fazer um SLA - service level agreements in service oriente architecture.pdf
 	- consequencias de nao cumprir o SLA, quer pelo cliente quer pelo prestador do serviço
+	- ciclo de vida de um SLA - in service level agreements in service oriente architecture.pdf
 
 
 
-
+http://searchitchannel.techtarget.com/definition/service-level-agreement
+http://searchcio.techtarget.com/answer/Whats-the-difference-between-SLO-and-SLA
+http://searchstorage.techtarget.com/feature/Service-level-agreement-SLA-negotiation-Defining-service-level-objectives
+http://searchitchannel.techtarget.com/feature/How-to-write-an-IT-service-level-agreement
 
 
 
