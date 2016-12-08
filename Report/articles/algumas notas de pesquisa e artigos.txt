@@ -1,0 +1,64 @@
+
+Tópicos a abordar:
+
+O que é um SLA
+	- o que significa
+	- principios de um SLA
+	- como fazer ou o que compoe um SLA
+	- porque fazer um SLA
+	- consequencias de nao cumprir o SLA, quer pelo cliente quer pelo prestador do serviço
+
+
+
+
+
+
+
+A service-level agreement (SLA) is a contract between an external service provider and its customers or between an IT department and the internal business units it serves. The agreement documents what services the provider or IT department will produce and what performance standards the provider or IT department is expected to meet. The performance metrics, or service levels, associated with an SLA are sometimes referred to as service-level objectives (SLOs). SLOs describe, usually in measurable terms, benchmarks or goals set by the parties involved around the services a provider furnishes a customer within a given time period. For example, when used as a call center metric, an SLO might be for the service provider's agents to answer 80% of incoming calls within one minute.
+
+
+SLAs enable customers and internal business units (collectively referred to here as "customers") to measure service provider or IT department (collectively referred to here as "service provider") performance and confirm that it is delivering services per the contract. SLAs are typically established for each IT service area, such as call center, data center or application maintenance. Customers create SLAs for each service they buy from a service provider, each of which includes a subset of performance metrics.
+
+Although there is no hard and fast rule governing how many SLOs may be included in each SLA, it only makes sense to measure what matters.
+
+Each SLO corresponds with a single performance characteristic relevant to the delivery of an overall service. Some examples of SLOs would include: system availability, help desk incident resolution time and application response time.
+
+
+in - http://searchcio.techtarget.com/answer/Whats-the-difference-between-SLO-and-SLA
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+Organizations seek to develop SLAs for various reasons. From a simple perspective, an SLA is
+developed between two parties to spell out who is responsible for what, what each party will do, and
+sometimes more importantly what each party will not do. From a business perspective, an SLA is
+developed for these reasons: 
+2 | CMU/SEI-2008-TN-021
+• New commercial services entering a competitive market can use SLAs to establish themselves as
+reliable providers and hence attract customers.
+• Service interactions across organizations increasingly permeate business processes and become
+critical to fulfilling business goals. SLAs establish a commitment to quality levels required by
+service users and providers to interact effectively. Moreover, SLA management helps customers
+validate and supervise the quality of services through scheduled and on-exception reports.
+• In one vision of the future, standardized services will be offered by multiple service providers. For
+example, realtors provide many different levels of service to home sellers, and all must provide a
+minimum level of service. That minimum service might offer use of the Multiple Listing Service
+(MLS) for the home at the cost of 1% of the home’s posted sale price. As part of enhanced
+service, the realtor might actively market and handle the sale for the owner at the cost of 6 or 7%
+percent of the home’s final sale price.
+In the context of web services, standardized services may be offered for common well-defined
+tasks such as tax return preparation, credit history requests, insurance claims, and banking. A
+common SLA that applies to a standard service is an important quality management artifact for
+service users and the regulatory agency responsible for overseeing the service.
+• Many organizations provide services that depend on services from other organizations. For
+example, an online travel-booking system may interact with (1) banks to authorize credit cards,
+(2) hotel chains to check availability and reserve rooms, (3) airlines for checking and booking
+flights, and (4) car rental companies. In addition, each organization providing a service may, in its
+turn, use services from other organizations (commonly called layered or composite services). In
+some situations, the unavailability or poor performance of one of the services may compromise
+the whole customer experience. In a multi-party composite service situation, SLAs can be used to
+identify the party that is responsible in case of a problem. 
+
+in - service level agreements in service oriente architecture.pdf
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
