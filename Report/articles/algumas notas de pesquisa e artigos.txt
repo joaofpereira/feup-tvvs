@@ -1,6 +1,15 @@
 
 Tópicos a abordar:
 
+Abstract
+
+Introduçao
+ - contexto dos SLA
+ 	- muito por alto o que sao, utilidade
+ - organizaçao do artigo
+
+
+
 O que é um SLA
 	- o que significa - http://www.slatemplate.com/sladefinition.php
 	- principios de um SLA - in service level agreements in service oriente architecture.pdf
@@ -11,7 +20,16 @@ O que é um SLA
 	- consequencias de nao cumprir o SLA, quer pelo cliente quer pelo prestador do serviço
 	- ciclo de vida de um SLA - in service level agreements in service oriente architecture.pdf
 
+SLA para segurnaça
 
+SLA para software testing
+
+SLA para performance
+
+Conclusão
+
+
+Referencias
 
 http://searchitchannel.techtarget.com/definition/service-level-agreement
 http://searchcio.techtarget.com/answer/Whats-the-difference-between-SLO-and-SLA
